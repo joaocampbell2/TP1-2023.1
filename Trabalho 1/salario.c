@@ -48,35 +48,35 @@ float calcularsalario(char funcao, int anosexp, int horasc, int horast,int *h, f
    {
    case ('A'):
     if(anosexp <=2){
-        salario = 45 * horasalario;
+        salario = 45 * horasalario + (diferencahoras * y * 45);
     }
     else if(anosexp <= 5){
-        salario = 55 * horasalario;
+        salario = 55 * horasalario + (diferencahoras * y * 55);
     }
     else{
-        salario = 70 * horasalario;
+        salario = 70 * horasalario + (diferencahoras * y * 70);
     }
     break;
    case ('P'):
     if(anosexp <=2){
-        salario = 25 * horasalario;
+        salario = 25 * horasalario + (diferencahoras * y * 25);
     }
-    if(3 <= anosexp <= 5){
-        salario = (30 * horasalario) + (diferencahoras * 30 * y);
+    else if(anosexp <= 5){
+        salario = 30 * horasalario + (diferencahoras * 30 * y);
     }
-    if(anosexp > 5) {
-        salario = (38 * horasalario) + (diferencahoras * 38 * 1.56);
+    else {
+        salario = 38 * horasalario + (diferencahoras * 38 * y);
     }
     break;
    case ('G'):
     if(anosexp <=2){
-        salario = (85 * horasalario) + (diferencahoras * 85 * 1.23);
+        salario = 85 * horasalario + (diferencahoras * 85 * y);
     }
-    if(3 <= anosexp <= 5){
-        salario = 102 * horasalario;
+    else if(anosexp <= 5){
+        salario = 102 * horasalario + (diferencahoras * y *102);
     }
-    if(anosexp > 5){
-        salario = 130 * horasalario;
+    else{
+        salario = 130 * horasalario + (diferencahoras * y *130);
     }
     break;  
    }
@@ -150,5 +150,4 @@ int main(){
 
 
 
-    return 0;
-}
+

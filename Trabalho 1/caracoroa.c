@@ -31,7 +31,7 @@ do{
     
     }
     else{
-        printf("ERRO!/n");
+        printf("ERRO!");
     }// fim do else 
 
 }while (n != 0); 
