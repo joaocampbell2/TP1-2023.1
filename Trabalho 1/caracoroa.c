@@ -2,7 +2,7 @@
 
 int main(){
 
-int n, maria , joao, valor;
+int n, maria , joao, r;
 
 do{
     printf("Digite o valor de n: \n"); 
@@ -11,31 +11,34 @@ do{
         maria = 0;
         joao = 0;
         for(int i = 1; i<= n; i++){
-            scanf("%d", &valor);
-            if (valor == 0){
+            scanf("%d", &r);
+            if (r == 0){
                 maria++;
-            } // fim do if
-            else if(valor == 1){
+            } 
+            else if(r == 1){
                 joao++;
-            } // fim do else if
+            } 
             else {
-                printf("Valor Inválido\n");
-                printf("Rodada desconsiderada"); 
+                printf("Valor Inválido, Digite novamente!\n");
                 break;
-            } // fim do else 
-        } //fim do for
-    
-        if (maria != 0 && joao != 0){
-            printf("\nMaria venceu %d vez(es) e João venceu %d vez(es)", maria, joao); 
-        } //fim do if
-    
+            }
+             
+        }
+        
+        
+        
+         
+        fflush(stdin);
+        if (maria != 0 || joao != 0){
+            printf("\nMaria venceu %d vez(es) e João venceu %d vez(es)\n", maria, joao); 
+        } 
     }
-    else{
-        printf("ERRO!");
-    }// fim do else 
+    else if (n !=0){
+        printf("ERRO! Digite um valor novamente\n");
+    }
 
 }while (n != 0); 
-// fim do do while
+
 
 return 0;
 } 
