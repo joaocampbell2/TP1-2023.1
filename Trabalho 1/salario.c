@@ -2,18 +2,27 @@
 
 void lerfuncionario(char *funcao, int *anosexp, int *horasc, int *horast){
     
+    do{
     printf("- Função do funcionário (P / A / G): ");
     scanf("%c", funcao);
-    scanf("%c", funcao); 
+    scanf("%c", funcao);
+    } while (*funcao != 'P' && *funcao != 'p' && *funcao != 'A' && *funcao != 'a' && *funcao != 'G' && *funcao != 'g'); 
 
+    do{
     printf("\n- Anos de Experiência: "); 
     scanf("%d", anosexp); 
+    } while (*anosexp < 0);
 
+    do{
     printf("\n- Horas contratadas: "); 
-    scanf("%d", horasc); 
+    scanf("%d", horasc);
+    }while (*horasc <= 0);
 
+    do{
     printf("\n- Horas trabalhadas: "); 
-    scanf("%d", horast);       
+    scanf("%d", horast);    
+    }while (*horast < 0);
+       
 }
 
 float calcularsalario(char funcao, int anosexp, int horasc, int horast,int *h, float *s, float *n, float *r){
@@ -146,7 +155,6 @@ int main(){
     }
     return 0;
 }
-
 
 
 
