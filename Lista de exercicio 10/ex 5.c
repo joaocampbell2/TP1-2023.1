@@ -8,15 +8,14 @@ typedef struct Conta{
 
 }Conta;
 
-void lerContas(Conta contas[],int n){    
+void lerContas(Conta contas[],int n){
     for (int i = 0;i < n; i++){
         printf("Insira nome: ") ;
-        fflush(stdin);
         fgets(contas[i].nome,20,stdin);
-        printf("Insira numero da conta");
+        printf("Insira numero da conta: ");
         scanf("%d",&contas[i].nConta);
         printf("Insira saldo inicial: ");
-        scanf("%f", &contas[i].saldo); 
+        scanf("%f", &contas[i].saldo);
     }
 }
 
@@ -76,9 +75,15 @@ int main(){
         }
 
         switch(input){
-            case 1: sacar(contas,n,nConta, valor); 
-            case 2: depositar(contas,n,nConta,valor);
-            case 3: saldo(contas,n,nConta);
+            case 1: 
+                sacar(contas,n,nConta, valor);
+                break;
+            case 2: 
+                depositar(contas,n,nConta,valor);
+                break;
+            case 3: 
+                saldo(contas,n,nConta);
+                break;
             default: break;
         }
 
